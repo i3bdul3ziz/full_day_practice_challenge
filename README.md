@@ -27,7 +27,13 @@ As Salamah District in Jeddah, Saudi Arabia has a large population of senior cit
 
 We need some way to get the list of things needed by the seniors and deliver to a location closer to them for pick up.
 
-The King decided to call on the SEI-12 team to develop a web app which the seniors can upload their required `items` and any registered tested `negative` youth can run this errands for them. 
+The King decided to call on the SEI-12 team to develop a web app which the seniors can upload their required `items` and any registered tested `negative` youth can run this errands for them.
+
+The `Seniors` should be able to register as a senior with contact details(name, address, age and phone number) and create a list with an expected delivery date. The list should contain items and a status(0 - free, 1 - inProgress and 2 - Fulfilled), each item should have a name and quantity.
+
+The `Helpers` should be able to register as a helper with contact details(name, address, age and phone number). Helper should be able to view all lists which have status of free.
+
+Helpers should also be which are inProgress or fulfilled if they are fulfilling the list or have fulfilled the list.
 
 ![](https://image.shutterstock.com/image-photo/dubai-united-arab-emirates-circa-260nw-396264253.jpg)
 
@@ -38,6 +44,7 @@ The King decided to call on the SEI-12 team to develop a web app which the senio
     - Admin
     - Senior
     - Helper
+ 1. All users should login with phone number and password.
  1. Anyone should be able to view the Seniors lists
  1. Only `helpers` can accept / deliver grocery items
  1. Items should be stored in seperate collection if needed.
