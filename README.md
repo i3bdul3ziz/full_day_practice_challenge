@@ -29,10 +29,31 @@ We need some way to get the list of things needed by the seniors and deliver to 
 
 The King decided to call on the SEI-12 team to develop a web app which the seniors can upload their required `items` and any registered tested `negative` youth can run this errands for them. 
 
-### Requirement
- 1. All Users must be registered on the web app
+![](https://image.shutterstock.com/image-photo/dubai-united-arab-emirates-circa-260nw-396264253.jpg)
 
+### Requirement
+-----
+ 1. All Users must be registered on the web app to post and accept task.
+ 1. There should be 3 types of users:
+    - Admin
+    - Senior
+    - Helper
+ 1. Anyone should be able to view the Seniors lists
+ 1. Only `helpers` can accept / deliver grocery items
+ 1. Items should be stored in seperate collection if needed.
+
+
+### Hints
+-------
+- User Model can have the following fields as booleans to restrict what is seen by the end user:
+    - isAdmin
+    - isHelper
+    - isSenior
 
 ### Credits
 -------------
  - Iweala Ebere
+
+### References
+- [NHS UK](https://www.nhs.uk/conditions/coronavirus-covid-19/#symptoms)
+- [Shutter Stock](https://image.shutterstock.com/image-photo/dubai-united-arab-emirates-circa-260nw-396264253.jpg)
