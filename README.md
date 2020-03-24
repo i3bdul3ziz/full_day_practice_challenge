@@ -27,7 +27,7 @@ As Salamah District in Jeddah, Saudi Arabia has a large population of senior cit
 
 We need some way to get the list of things needed by the seniors and deliver to a location closer to them for pick up.
 
-The King decided to call on the SEI-12 team to develop a web app which the seniors can upload their required `items` and any registered tested `negative` youth can run this errands for them.
+The King decided to call on the SEI-12 team to develop a web app which the seniors can upload their required `items` and any registered youth can run this errands for them.
 
 The `Seniors` should be able to register as a senior with contact details(name, address, age and phone number) and create a list with an expected delivery date. The list should contain items and a status(0 - free, 1 - inProgress and 2 - Fulfilled), each item should have a name and quantity.
 
@@ -59,7 +59,7 @@ Helpers should also be which are inProgress or fulfilled if they are fulfilling 
 
 ### Credits
 -------------
- - Iweala Ebere
+ - [Iweala Ebere](mailto:ebere.iweala@ga.co)
 
 ### References
 - [NHS UK](https://www.nhs.uk/conditions/coronavirus-covid-19/#symptoms)
