@@ -90,8 +90,6 @@ Helpers should also be able to view lists which are inProgress or fulfilled, the
     ]
  }
  ```
-
-  ```
 </details>
 
 
