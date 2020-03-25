@@ -21,33 +21,71 @@ It's not known exactly how coronavirus (COVID-19) spreads from person to person,
 
 ### Problem / Prompt
 ---
-A curfew from 6:00hrs - 19:00hrs has been implemented by the Kingdom of Saudi Arabia to ensure the safety of the kingdom and cortail the spread of the virus.
+![](https://s30876.pcdn.co/wp-content/uploads/Saudi-Arabia-1170x630.jpg)
+A curfew from <strong>06:00Hrs - 19:00Hrs</strong> has been implemented by the <strong>Kingdom of Saudi Arabia</strong>  to ensure the safety of the kingdom and cortail the spread of the virus.
 
-As Salamah District in Jeddah, Saudi Arabia has a large population of senior citizen who can't go to the store and compete with the younger citizens to stock up on groceries during the curfew. 
+<strong>As Salamah District in Jeddah, Saudi Arabia</strong> has a large population of senior citizen who can not go to the store and compete with the younger citizens in panick shopping to stock up on groceries during the curfew. 
 
 We need some way to get the list of things needed by the seniors and deliver to a location closer to them for pick up.
 
-The King decided to call on the SEI-12 team to develop a web app which the seniors can upload their required `items` and any registered youth can run this errands for them.
+The King decided to call on the <strong>SEI-12 team</strong> to develop a web app which allows the seniors create a list of their required `items` and any registered youth can run these errands for them.
 
-The `Seniors` should be able to register as a senior with contact details(name, address, age and phone number) and create a list with an expected delivery date. The list should contain items and a status(0 - free, 1 - inProgress and 2 - Fulfilled), each item should have a name and quantity.
+#### Task 1:
+The `Seniors` should be able to register as a senior with contact details(name, address, age and phone number) and create a list with an expected delivery date. The list should contain items and a status ( *0 - free,1 - inProgress and 2 - fulfilled*), each item should have a name and quantity.
 
+#### Task 2:
 The `Helpers` should be able to register as a helper with contact details(name, address, age and phone number). Helper should be able to view all lists which have status of free.
 
-Helpers should also be which are inProgress or fulfilled if they are fulfilling the list or have fulfilled the list.
+#### Task 3:
+Helpers should also be able to view lists which are inProgress or fulfilled, they should be able to see lists if they are fulfilling the list or have fulfilled the list.
 
+## Help the seniors
 ![](https://image.shutterstock.com/image-photo/dubai-united-arab-emirates-circa-260nw-396264253.jpg)
 
-### Requirement
+### Requirements
 -----
  1. All Users must be registered on the web app to post and accept task.
  1. There should be 3 types of users:
     - Admin
     - Senior
     - Helper
- 1. All users should login with phone number and password.
+ 1. All users should only login with phone number and password.
  1. Anyone should be able to view the Seniors lists
  1. Only `helpers` can accept / deliver grocery items
  1. Items should be stored in seperate collection if needed.
+ 
+ ### Information for users
+ ```javascript
+ {
+     firstname: "",
+     lastname:"",
+     dateOfBirth: "",
+     address: {
+         houseNumber: 0,
+         street: "",
+         city : "",
+         district: ""
+     },
+     lists:[]
+ }
+ ```
+### List information
+  ```javascript
+ {
+     lists: [
+         {
+            items:[
+                {
+                    item: "",
+                    quantity: 0
+                }
+            ],
+            deliveryDate:"",
+            status: 0 // 0/ 1 / 2
+         }
+    ]
+ }
+ ```
 
 
 ### Hints
@@ -55,11 +93,16 @@ Helpers should also be which are inProgress or fulfilled if they are fulfilling 
 - User Model can have the following fields as booleans to restrict what is seen by the end user:
     - isAdmin
     - isHelper
-    - isSenior
+    - isSenior 
+
+
+### Bonus
+1. 
+1. 
 
 ### Credits
 -------------
- - [Iweala Ebere](mailto:ebere.iweala@ga.co)
+ - Iweala Ebere
 
 ### References
 - [NHS UK](https://www.nhs.uk/conditions/coronavirus-covid-19/#symptoms)
