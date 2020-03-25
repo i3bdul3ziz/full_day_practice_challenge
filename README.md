@@ -74,6 +74,80 @@ Helpers should also be able to view unfulfilled lists. They should also be able 
   - isSenior
 - [Query by in Mongoose](https://mongoosejs.com/docs/api.html#model_Model.find)
 
+- Grid styled CSS:
+  I have added system which allows for a maximum of 12 columns, in my example below `col-4` means of size 4 and `4 x 3 = 12`
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-4">Left column</div>
+    <div class="col-4">Center column</div>
+    <div class="col-4">Right column</div>
+  </div>
+</div>
+```
+
+![](https://miro.medium.com/max/1520/1*vI1swETTM0HNBuoPfm0hmw.png)
+
+- box
+
+```html
+<div class="box" style="width: 18rem;">
+  <div class="box-body">
+    <h5 class="box-title">Card title</h5>
+    <h6 class="box-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="box-text">
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </p>
+    <a href="#" class="box-link">Card link</a>
+    <a href="#" class="box-link">Another link</a>
+  </div>
+</div>
+```
+
+![](img/box.png)
+
+- Button
+
+```html
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-success">Success</button>
+<button class="btn btn-danger">Danger</button>
+```
+
+![](img/buttons.png)
+
+- Forms
+
+```html
+<form>
+  <div class="row">
+    <div class="col-6">
+      <label for="inputAddress">Email</label>
+      <input type="text" class="form-input" placeholder="Email" />
+    </div>
+    <div class="col-6">
+      <label for="inputAddress">Password</label>
+      <input type="text" class="form-input" placeholder="Password" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <label for="inputAddress">Address</label>
+      <input
+        type="text"
+        class="form-input"
+        id="inputAddress"
+        placeholder="1234 Main St"
+      />
+    </div>
+  </div>
+</form>
+```
+
+![](img/form.png)
+
 ### Bonus
 
 ---
