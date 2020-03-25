@@ -2,9 +2,11 @@
 ![Misk Logo](https://i.ibb.co/KmXhJbm/Webp-net-resizeimage-1.png)
 
 ## Online Full Day Challenge
+
 COVID-19 is a new illness that can affect your lungs and airways. It's caused by a virus called coronavirus.
 
 The symptoms of coronavirus are:
+
 - a cough
 - a high temperature
 - shortness of breath
@@ -20,45 +22,69 @@ There's no specific treatment for coronavirus (COVID-19). Treatment aims to reli
 It's not known exactly how coronavirus (COVID-19) spreads from person to person, but similar viruses are spread in cough droplets.
 
 ### Problem / Prompt
----
-![](https://s30876.pcdn.co/wp-content/uploads/Saudi-Arabia-1170x630.jpg)
-A curfew from <strong>06:00Hrs - 19:00Hrs</strong> has been implemented by the <strong>Kingdom of Saudi Arabia</strong>  to ensure the safety of the kingdom and cortail the spread of the virus.
 
-<strong>As Salamah District in Jeddah, Saudi Arabia</strong> has a large population of senior citizen who can not go to the store and compete with the younger citizens in panick shopping to stock up on groceries during the curfew. 
+---
+
+![](https://s30876.pcdn.co/wp-content/uploads/Saudi-Arabia-1170x630.jpg)
+A curfew from <strong>06:00Hrs - 19:00Hrs</strong> has been implemented by the <strong>Kingdom of Saudi Arabia</strong> to ensure the safety of the kingdom and cortail the spread of the virus.
+
+<strong>As Salamah District in Jeddah, Saudi Arabia</strong> has a large population of senior citizen who can not go to the store and compete with the younger citizens in panick shopping to stock up on groceries during the curfew.
 
 We need some way to get the list of things needed by the seniors and deliver to a location closer to them for pick up.
 
 The King decided to call on the <strong>SEI-12 team</strong> to develop a web app which allows the seniors create a list of their required `items` and any registered youth can run these errands for them.
 
 #### Task 1:
-The `Seniors` should be able to register as a senior with contact details(name, address, age and phone number) and create a list with an expected delivery date. The list should contain items and a status ( *0 - free,1 - inProgress and 2 - fulfilled*), each item should have a name and quantity.
+
+The `Seniors` should be able to register as a senior with contact details(name, address, age and phone number) and create a list with an expected delivery date. The list should contain items and a status ( _0 - free,1 - inProgress and 2 - fulfilled_), each item should have a name and quantity.
 
 #### Task 2:
+
 The `Helpers` should be able to register as a helper with contact details(name, address, age and phone number). Helper should be able to view all lists which have status of free.
 
 #### Task 3:
+
 Helpers should also be able to view lists which are inProgress or fulfilled, they should be able to see lists if they are fulfilling the list or have fulfilled the list.
 
 ## Help the seniors
+
 ![](https://image.shutterstock.com/image-photo/dubai-united-arab-emirates-circa-260nw-396264253.jpg)
 
 ### Requirements
------
- 1. All Users must be registered on the web app to post and accept task.
- 1. There should be 3 types of users:
+
+---
+
+1.  All Users must be registered on the web app to post and accept task.
+1.  There should be 3 types of users:
     - Admin
     - Senior
     - Helper
- 1. All users should only login with phone number and password.
- 1. Anyone should be able to view the Seniors lists
- 1. Only `helpers` can accept / deliver grocery items
- 1. Items should be stored in seperate collection if needed.
- 
- 
+1.  All users should only login with phone number and password.
+1.  Anyone should be able to view the Seniors lists
+1.  Only `helpers` can accept / deliver grocery items
+1.  Items should be stored in seperate collection if needed.
+
+### Hints
+
+---
+
+- User Model can have the following fields as booleans to restrict what is seen by the end user:
+  - isAdmin
+  - isHelper
+  - isSenior
+
+### Bonus
+
+---
+
+1. Include JQuery for validation on client side
+1. Add some animations, to view full details as a modal popup
+
  <details>
-  <summary>*I am lost and need help</summary>
+  <summary>To Chip In </summary>
   
  ### Information for users
+ ----
  ```javascript
  {
      firstname: "",
@@ -74,6 +100,7 @@ Helpers should also be able to view lists which are inProgress or fulfilled, the
  }
  ```
 ### List information
+----
   ```javascript
  {
      lists: [
@@ -92,23 +119,15 @@ Helpers should also be able to view lists which are inProgress or fulfilled, the
  ```
 </details>
 
-
-### Hints
--------
-- User Model can have the following fields as booleans to restrict what is seen by the end user:
-    - isAdmin
-    - isHelper
-    - isSenior 
-
-
-### Bonus
-1. 
-1. 
-
 ### Credits
--------------
- - Iweala Ebere
+
+---
+
+- [Iweala Ebere](mailto:ebere.iweala@ga.co)
 
 ### References
+
+---
+
 - [NHS UK](https://www.nhs.uk/conditions/coronavirus-covid-19/#symptoms)
 - [Shutter Stock](https://image.shutterstock.com/image-photo/dubai-united-arab-emirates-circa-260nw-396264253.jpg)
