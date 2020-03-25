@@ -54,6 +54,10 @@ Helpers should also be able to view lists which are inProgress or fulfilled, the
  1. Only `helpers` can accept / deliver grocery items
  1. Items should be stored in seperate collection if needed.
  
+ 
+ <details>
+  <summary>*I am lost and need help</summary>
+  
  ### Information for users
  ```javascript
  {
@@ -86,6 +90,9 @@ Helpers should also be able to view lists which are inProgress or fulfilled, the
     ]
  }
  ```
+
+  ```
+</details>
 
 
 ### Hints
