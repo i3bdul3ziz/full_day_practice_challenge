@@ -44,7 +44,7 @@ The `Helpers` should be able to register as a helper with contact details(name, 
 
 #### Task 3:
 
-Helpers should also be able to view lists which are inProgress or fulfilled, they should be able to see lists if they are fulfilling the list or have fulfilled the list.
+Helpers should also be able to view unfulfilled lists. They should also be able to see lists if they are fulfilling the list or have been fulfilled by them on their profile page.
 
 ## Help the seniors
 
@@ -72,6 +72,7 @@ Helpers should also be able to view lists which are inProgress or fulfilled, the
   - isAdmin
   - isHelper
   - isSenior
+- [Query by in Mongoose](https://mongoosejs.com/docs/api.html#model_Model.find)
 
 ### Bonus
 
