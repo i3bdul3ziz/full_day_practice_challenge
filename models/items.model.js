@@ -5,15 +5,16 @@ var itemSchema = new mongoose.Schema({
             {
                items:[
                    {
-                       item: "",
-                       quantity: 0
+                       item: String,
+                       quantity: Number
                    }
                ],
-               deliveryDate:"",
+               deliveryDate:String,
                status: 0 // 0/ 1 / 2
             }
        ]
-})
+    }
+)
 
 
 const Item = mongoose.model("Item", itemSchema);

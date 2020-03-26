@@ -25,7 +25,10 @@ var userSchema = new mongoose.Schema({
     type:Number,
     required: true
   },
-  items:[],
+  items:[{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Item'
+  }],
   isAdmin:{
     type: Boolean,
     default: false

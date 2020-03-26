@@ -5,7 +5,9 @@ const User = require('../models/user.model')
 const Item = require('../models/items.model')
 
 router.get('/items', (req, res) =>{
-        res.render('items/index')
+    Item.find().then((item) => {
+        res.render('items/index', {item})
+    })
 })
 
 
@@ -14,12 +16,20 @@ router.get('/items/create', (req, res) =>{
 })
 
 router.post('/items/create', (req, res) =>{
+    console.log(req.body)
     let item = new Item(req.body)
+    console.log(item.lists.items[0].item)
+    item.lists.forEach((element, i) => {
+        item.lists[i].items[i].item = req.body.item
+        Item.lists[i].items[i].quantity = req.body.quantity
+        Item.lists[i].deliveryDate = req.body.deliveryDate
+        Item.lists[i].status = 0
+    });
     // save item
     item
         .save()
         .then(() => {
-        res.redirect('/:id/items')
+        res.redirect('/items')
         })
         .catch( err => {
             console.log(err)
