@@ -14,12 +14,18 @@ router.get('/items/create', (req, res) =>{
 })
 
 router.post('/items/create', (req, res) =>{
-    let item = new Item(req.body)
+    console.log(req.body)
+    let item = new Item(Item.items.item = req.body)
+    console.log(item)
+    
+    
+    
     // save item
     item
         .save()
         .then(() => {
-        res.redirect('/:id/items')
+            let newitem=new(re)
+        res.redirect('/items')
         })
         .catch( err => {
             console.log(err)
