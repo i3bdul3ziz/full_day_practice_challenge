@@ -3,11 +3,11 @@ const express = require('express')
 const PORT = process.env.PORT
 const mongoose = require('mongoose')
 const expressLayouts = require('express-ejs-layouts')
-const authRoutes = require('./routes/auth.routes')
-const itemsRoutes = require('./routes/items.routes')
+const authRoutes = require('./routes/auth.route')
+const itemsRoutes = require('./routes/items.route')
 const session = require("express-session")
 const flash = require('connect-flash')
-let passport = require("./helper/passportConfig")
+let passport = require("./config/passportConfig")
 const app = express()
 /*
 
@@ -30,7 +30,7 @@ app.set('view engine', 'ejs')
 app.use(expressLayouts)
 
 /*-- These must be place in the correct place */
-server.use(
+app.use(
   session({
     secret: process.env.SECRET,
     saveUninitialized: true,
@@ -39,11 +39,11 @@ server.use(
   })
 );
 //-- passport initialization
-server.use(passport.initialize());
-server.use(passport.session());
-server.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
-server.use(function(request, response, next) {
+app.use(function(request, response, next) {
   // before every route, attach the flash messages and current user to res.locals
   response.locals.alerts = request.flash();
   response.locals.currentUser = request.user;
@@ -57,6 +57,6 @@ app.get('*', (req, res) => {
     res.send('does not exist')
 })
 
-server.listen(process.env.PORT, () =>
+app.listen(process.env.PORT, () =>
   console.log(`connected to express on ${PORT}`)
 );

@@ -8,10 +8,8 @@
   </head>
   <body>
     <nav class="navigation">
-      <a href="/<%=user._id%>/items">items </a>
       <div>
         <% if(currentUser) {%>
-        <a href="/<%=user._id%>/items"><%= currentUser.name %></a>
         <a href="/auth/logout">Logout</a>
         <%} %> <% if(!currentUser) {%>
         <a href="/auth/signin">Signin</a>

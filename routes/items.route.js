@@ -4,21 +4,16 @@ const isLoggedIn = require("../config/loginBlocker");
 const User = require('../models/user.model')
 const Item = require('../models/items.model')
 
-router.get('/:id/items', (req, res) =>{
-    User.findById(req.params.id).then(item => {
+router.get('/items', (req, res) =>{
         res.render('items/index')
-    })
 })
 
 
-router.get('/:id/items/create', (req, res) =>{
-    User.findById(req.params.id).then(item => {
+router.get('/items/create', (req, res) =>{
         res.render('items/create')
-    })
 })
 
-router.post('/:id/items/create', (req, res) =>{
-    User.findById(req.params.id).then(() => {
+router.post('/items/create', (req, res) =>{
     let item = new Item(req.body)
     // save item
     item
@@ -30,5 +25,22 @@ router.post('/:id/items/create', (req, res) =>{
             console.log(err)
             res.send('Error!!!!!!')
         })
+})
+
+
+
+router.get('/items/:id/edit', (req, res) =>{
+    res.render('items/edit')
+})
+
+router.post('/items/:id/edit', (req, res) =>{
+    Item.findByIdAndUpdate(req.params.id).then(item => {
+        item.quantity = req.body.quantity
+        item.deliveryDate = req.body.deliveryDate
+    }).catch(err => {
+        console.log(err)
     })
 })
+
+
+module.exports = router
