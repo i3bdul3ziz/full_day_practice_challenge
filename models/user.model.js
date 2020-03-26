@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
+
 var userSchema = new mongoose.Schema({
   phone: {
     type: String,
@@ -9,6 +10,33 @@ var userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  name:{
+    type:String,
+    required: true
+  },
+  address: {
+    houseNumber: 0,
+    street: "",
+    city : "",
+    district: ""
+  },
+  age:{
+    type:Number,
+    required: true
+  },
+  items:[],
+  isAdmin:{
+    type: Boolean,
+    default: false
+  },
+  isHelper:{
+    type: Boolean,
+    default: false
+  },
+  isSenior:{
+    type: Boolean,
+    default: true
   }
 });
 
