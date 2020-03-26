@@ -50,6 +50,15 @@ Helpers should also be able to view unfulfilled lists. They should also be able 
 
 ![](https://image.shutterstock.com/image-photo/dubai-united-arab-emirates-circa-260nw-396264253.jpg)
 
+### Get Started
+
+```terminal
+  $ git clone https://git.generalassemb.ly/sei-jeddah/full_day_practice_challenge.git
+
+  $ cd coronavirus_challenge
+  $ npm install
+```
+
 ### Requirements
 
 ---
