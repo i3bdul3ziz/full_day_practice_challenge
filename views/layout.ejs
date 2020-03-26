@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Login Application</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="/<%=user._id%>/items">items </a>
+      <div>
+        <% if(currentUser) {%>
+        <a href="/<%=user._id%>/items"><%= currentUser.name %></a>
+        <a href="/auth/logout">Logout</a>
+        <%} %> <% if(!currentUser) {%>
+        <a href="/auth/signin">Signin</a>
+        <a href="/auth/signup">Signup</a>
+        <%} %>
+      </div>
+    </nav>
+    <%- body %>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/happy.js"></script>
+  </body>
+</html>
