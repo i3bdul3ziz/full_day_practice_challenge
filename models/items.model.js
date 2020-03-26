@@ -1,18 +1,21 @@
 const mongoose = require("mongoose");
 
 var itemSchema = new mongoose.Schema({
-        lists: [
-            {
-               items:[
+       
+          
+               items:
                    {
-                       item: "",
-                       quantity: 0
+                       item:String,
+                       quantity: Number
                    }
-               ],
-               deliveryDate:"",
-               status: 0 // 0/ 1 / 2
-            }
-       ]
+               ,
+               deliveryDate:Date,
+               status:{Type:Number,
+                default:0
+                
+            }  // 0/ 1 / 2
+           
+      
 })
 
 
