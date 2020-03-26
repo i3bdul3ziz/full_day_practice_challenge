@@ -2,15 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
 var userSchema = new mongoose.Schema({
-  firstname: {
-    type: String,
-    required: true
-  },
-  lastname: {
-    type: String,
-    required: true
-  },
-  username: {
+  phone: {
     type: String,
     required: true
   },
@@ -22,7 +14,6 @@ var userSchema = new mongoose.Schema({
 
 userSchema.pre("save", function(next) {
   var user = this;
-
   // Only hash the password if it has been modified (or is new)
   if (!user.isModified("password")) return next();
 

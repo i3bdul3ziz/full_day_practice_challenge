@@ -57,6 +57,7 @@ Helpers should also be able to view unfulfilled lists. They should also be able 
 
   $ cd coronavirus_challenge
   $ npm install
+  $ touch .env
 ```
 
 ### Requirements
